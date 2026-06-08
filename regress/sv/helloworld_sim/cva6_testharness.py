@@ -1367,7 +1367,7 @@ def build_verilator_model(
         "-CFLAGS",
         cflags,
         "-LDFLAGS",
-        ldflags,
+        cflags,
     ]
     run(command, cwd=repo)
     make_command = ["make", f"-j{jobs}", "-f", "Variane_testharness.mk"]
